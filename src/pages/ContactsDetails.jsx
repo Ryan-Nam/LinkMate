@@ -109,6 +109,7 @@ export default function ContactsDetails() {
           <div className='mt-6 flex justify-center'>
             <div className='w-full'>
               <iframe
+                title="Google Map"
                 className='w-full h-96'
                 loading='lazy'
                 allowFullScreen
