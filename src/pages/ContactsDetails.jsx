@@ -105,19 +105,19 @@ export default function ContactsDetails() {
         </div>
 
         {/* Google Maps */}
-        {contact.address.geo && (
-          <div className='mt-6 flex justify-center'>
-            <div className='w-full max-w-screen-lg'>
-              <iframe
-                className='w-full h-96' // 크기를 조정할 수 있는 클래스를 추가하고 원하는 높이를 설정합니다.
-                loading='lazy'
-                allowFullScreen
-                referrerPolicy='no-referrer-when-downgrade'
-                src={createGoogleMapsUrl(contact.address.geo)}
-              ></iframe>
-            </div>
-          </div>
-        )}
+{contact.address.geo && (
+  <div className='mt-6 flex justify-center'>
+    <div className='w-full'> {/* Adjust this to match the grid's width */}
+      <iframe
+        className='w-full h-96' // Keep the full width for the iframe
+        loading='lazy'
+        allowFullScreen
+        referrerPolicy='no-referrer-when-downgrade'
+        src={createGoogleMapsUrl(contact.address.geo)}
+      ></iframe>
+    </div>
+  </div>
+)}
       </div>
     </div>
   );
