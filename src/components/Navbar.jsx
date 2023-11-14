@@ -31,7 +31,7 @@ export default function Navbar({ onToggleSidebar }) {
           </button>
 
           <Link to='/' className='flex ms-2 md:me-24'>
-              <RiContactsBook2Fill className='text-4xl text-red-800' />
+              <RiContactsBook2Fill className='text-4xl text-brand' />
               <h1 className='self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white'>
                 HiMate
               </h1>
