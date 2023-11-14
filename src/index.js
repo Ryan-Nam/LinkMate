@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import NotFound from './pages/NotFound';
-import Contacts from './pages/Contacts';
+import ContactsDetails from './pages/ContactsDetails';
 
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "contacts/:contactId",
-        element: <Contacts />,
+        element: <ContactsDetails />,
       },
     ],
   },

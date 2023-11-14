@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import Navbar from './components/Navbar';
 // import { Outlet } from 'react-router-dom';
 import Home from './pages/Home';
