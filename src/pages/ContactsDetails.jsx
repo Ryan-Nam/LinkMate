@@ -10,6 +10,7 @@ import {
   FiBookmark,
 } from 'react-icons/fi';
 import { FaBuilding, FaBullhorn } from 'react-icons/fa';
+import { TiBusinessCard } from 'react-icons/ti';
 
 export default function ContactsDetails() {
   const {
@@ -32,23 +33,75 @@ export default function ContactsDetails() {
           </div>
 
           <div className='flex flex-col md:flex-row space-y-6 md:space-x-6'>
+            {/* 왼쪽 */}
             <div className='flex-1'>
-            <FiUserPlus className='text-4xl' /><span className='text-sm'> {contact.name}</span>
-              <p className='text-sm'><FiEdit2 className='text-blue-500 text-xl mr-2' /> {contact.username}</p>
-              <p className='text-sm'><FiMail className='text-blue-500 text-xl mr-2' /> {contact.email}</p>
-              <p className='text-sm'><FiPhone className='text-blue-500 text-xl mr-2' /> {contact.phone}</p>
-            </div>
+              <div className='flex items-center text-sm'>
+                <FiUserPlus className='text-2xl' />
+                <p className='ml-2'>{`${contact.name} (${contact.username})`}</p>
+                <p>Username</p>
+              </div>
+              {/* 
+              <div className='flex items-center text-sm'>
+                <FiEdit2 className='text-2xl' />
+                <span className='ml-2'>{contact.username}</span>
+              </div> */}
 
+              <div className='flex items-center text-sm'>
+                <FiMail className='text-2xl' />
+                <span className='ml-2'>{contact.email}</span>
+              </div>
+
+              <div className='flex items-center text-sm'>
+                <FiPhone className='text-2xl' />
+                <span className='ml-2'>{contact.phone}</span>
+              </div>
+
+              <div className='flex items-center text-sm'>
+                <FiBookmark className='text-2xl' />
+                <span>{contact.website}</span>
+                <a
+                  href={`http://${contact.website}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Link
+                </a>
+              </div>
+              
+            </div>
+            
+
+            {/* 오른쪽 */}
             <div className='flex-1'>
-              <p className='text-sm'><FiPhone className='text-blue-500 text-xl mr-2' /> {contact.phone}</p>
-              <p className='text-sm'>
-                <FiBookmark className='text-blue-500 text-xl mr-2' />
-                <a href={`http://${contact.website}`} target="_blank" rel="noopener noreferrer">{contact.website}</a>
-              </p>
-              <p className='text-sm flex items-center'><FaBuilding className='text-blue-500 text-xl mr-2' /> {contact.company.name}</p>
-              <p className='text-sm flex items-center'><FaBullhorn className='text-blue-500 text-xl mr-2' /> {contact.company.catchPhrase}</p>
-              <p className='text-sm'><strong>Business:</strong> {contact.company.bs}</p>
-              <p className='text-sm'><FiMapPin className='text-blue-500 text-xl mr-2' /> {`${contact.address.street}, ${contact.address.suite}, ${contact.address.city}, ${contact.address.zipcode}`}</p>
+              
+
+              
+
+              <div className='text-sm'>
+                <div className='flex items-center'>
+                  <FaBuilding className='text-2xl' />
+                  <span className='ml-2 font-semibold'>Company</span>
+                </div>
+                <ul className='list-disc list-inside ml-8'>
+                  <li>
+                    <span className='font-semibold'>Name:</span>{' '}
+                    {contact.company.name}
+                  </li>
+                  <li>
+                    <span className='font-semibold'>Catch Phrase:</span>{' '}
+                    {contact.company.catchPhrase}
+                  </li>
+                  <li>
+                    <span className='font-semibold'>BS:</span>{' '}
+                    {contact.company.bs}
+                  </li>
+                </ul>
+              </div>
+
+              <div className='flex items-center text-sm'>
+                <FiMapPin className='text-2xl' />
+                <span className='ml-2'>{` ${contact.address.suite}, ${contact.address.street}, ${contact.address.city}, ${contact.address.zipcode}`}</span>
+              </div>
             </div>
           </div>
 
