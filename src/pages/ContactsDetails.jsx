@@ -22,9 +22,9 @@ export default function ContactsDetails() {
       <div className='p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14'>
         <div className='text-center mb-6'>
           <img
-            src={`/images/people${contact.id}.webp`} // 이미지 파일 경로
+            src={`/images/people${contact.id}.webp`} 
             alt={contact.name}
-            className='w-20 h-20 rounded-full mx-auto mb-4' // 이미지 크기 및 모양 설정
+            className='w-20 h-20 rounded-full mx-auto mb-4' 
           />
           <h2 className='text-3xl font-bold'>{contact.name}</h2>
         </div>
@@ -105,19 +105,19 @@ export default function ContactsDetails() {
         </div>
 
         {/* Google Maps */}
-{contact.address.geo && (
-  <div className='mt-6 flex justify-center'>
-    <div className='w-full'> {/* Adjust this to match the grid's width */}
-      <iframe
-        className='w-full h-96' // Keep the full width for the iframe
-        loading='lazy'
-        allowFullScreen
-        referrerPolicy='no-referrer-when-downgrade'
-        src={createGoogleMapsUrl(contact.address.geo)}
-      ></iframe>
-    </div>
-  </div>
-)}
+        {contact.address.geo && (
+          <div className='mt-6 flex justify-center'>
+            <div className='w-full'>
+              <iframe
+                className='w-full h-96'
+                loading='lazy'
+                allowFullScreen
+                referrerPolicy='no-referrer-when-downgrade'
+                src={createGoogleMapsUrl(contact.address.geo)}
+              ></iframe>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
