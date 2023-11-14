@@ -5,8 +5,8 @@ LinkMate is a responsive contact application that allows users to browse their c
 ## Features
 
 - Users can view a list of contacts fetched from https://jsonplaceholder.typicode.com/users.
-- The app provides a visually appealing user interface for contact details.
-- No create, update, or delete functionality is implemented as it focuses on contact browsing.
+- Utilizes a responsive design for seamless use on various devices.
+- Implements a sidebar for easy navigation, enhancing the user experience.
 
 ## How to Run
 
