@@ -1,6 +1,6 @@
 # LinkMate Contact App
 
-LinkMate is a responsive contact application that allows users to browse their contacts. It is built using React and leverages various libraries and tools including Axios, @tanstack/react-query, react-icons, react-router-dom, and tailwindcss.
+LinkMate is a responsive contact application that allows users to browse their contacts. It is built using React and leverages various libraries and tools including Axios, @tanstack/react-query, react-icons, react-router-dom, and tailwindcss. Link: https://linkmate.netlify.app/
 
 ## Features
 
